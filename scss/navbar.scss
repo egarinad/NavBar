@@ -1,0 +1,142 @@
+@import "./base";
+
+body {
+    font-family: Montserrat;
+}
+
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.content {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    box-shadow: 0px 9px 8px 0px rgba(0, 0, 0, 0.12);
+    height: 8vh;
+    background-color: rgb(252, 199, 175);
+    font-size: 30px;
+    justify-content: space-between;
+    &__logo {
+        padding: 0 20px;
+        line-height: 8vh;
+        letter-spacing: 2.5px;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        line-height: 8vh;
+    }
+
+    &__button {
+        display: none;
+        position: absolute;
+        right: 30px;
+        line-height: 8vh;
+        background-color: rgb(252, 199, 175);
+        font-size: 5vw;
+    }
+}
+.menu {
+    &__item {
+        margin-right: 20px;
+        font-size: 26px;
+    }
+}
+.item {
+    &__link {
+        padding: 5px 10px;
+        border-bottom: 1px solid black;
+        border-radius: 8px;
+        &:hover {
+            transition: 0.5s;
+            background-color: #fff;
+        }
+    }
+}
+
+.footer {
+    box-shadow: 0px -9px 8px 0px rgba(0, 0, 0, 0.12);
+    height: 8vh;
+    background-color: rgb(252, 199, 175);
+    font-size: 12px;
+    line-height: 8vh;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .header {
+        height: 8vh;
+        font-size: 5vw;
+        &__button {
+            display: block;
+            font-size: 5vw;
+        }
+    }
+}
+
+@media (max-width: 1350px) {
+    .header {
+        &__button {
+            display: block;
+            font-size: 30px;
+        }
+        &__menu {
+            height: 84vh;
+            display: none;
+            position: absolute;
+            top: 8vh;
+            flex-direction: column;
+            // text-align: center;
+            align-items: center;
+            width: 100%;
+            background-color: rgb(252, 199, 175);
+            margin-right: 0px;
+        }
+    }
+    .menu {
+        padding-top: 15vh;
+        &__item {
+            width: 100%;
+            font-size: 3vh;
+        }
+    }
+    .item {
+        &__link {
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid #000;
+            padding: 5px 10px;
+            border-radius: 8px;
+            &:hover {
+                transition: 0.5s;
+                background-color: #fff;
+            }
+        }
+    }
+    .toggle {
+        display: block;
+    }
+    li:nth-child(1) {
+        border-top: 1px solid black;
+        border-radius: 0px;
+    }
+}
